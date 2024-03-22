@@ -10,7 +10,7 @@ terraform {
 provider "kind" {}
 
 resource "kind_cluster" "default" {
-    name           = "test-cluster"
+    name           = var.cluster_name
     wait_for_ready = true
 
   kind_config {
