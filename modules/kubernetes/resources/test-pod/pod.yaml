@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: foo-app
+  namespace: playground
+  labels:
+    app: foo
+spec:
+  containers:
+  - command:
+    - /agnhost
+    - netexec
+    - --http-port
+    - "8080"
+    image: registry.k8s.io/e2e-test-images/agnhost:2.39
+    name: foo-app

@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: foo-service
+  namespace: playground
+spec:
+  selector:
+    app: foo
+  ports:
+  # Default port used by the image
+  - port: 8080
